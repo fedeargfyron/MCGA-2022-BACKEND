@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "name": "MCGA-2022-BACKEND",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedeargfyron/MCGA-2022-BACKEND.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedeargfyron/MCGA-2022-BACKEND/issues"
+  },
+  "homepage": "https://github.com/fedeargfyron/MCGA-2022-BACKEND#readme"
+}
