@@ -11,6 +11,14 @@ app.listen(PORT, () => {
  
 app.use(express.json())
  
+const { MongoClient } = require("mongodb");
+ 
+// Replace the following with your Atlas connection string                                                                                                                                        
+const url = "mongodb+srv://Fede2022:MThVsbARDDn71m7z@mcga-db.6ax3ppw.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(url);
+
+run().catch(console.dir);
+
 app.get('/products', (req, res) => {
     res.send(products);
 })
@@ -52,3 +60,16 @@ app.delete('/products/:id', (req, res) => {
     });
     res.status(200).json();
 })
+
+async function run() {
+    try {
+        await client.connect();
+        console.log("Connected correctly to server");
+
+    } catch (err) {
+        console.log(err.stack);
+    }
+    finally {
+        await client.close();
+    }
+}
