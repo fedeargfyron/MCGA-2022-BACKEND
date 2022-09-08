@@ -6,7 +6,7 @@ const getProducts = async () => {
 }
 
 const getById = async (id) => {
-    return await Product.getById(id);
+    return await Product.findById(id);
 }
 
 const postProduct = async (body) => {
@@ -14,7 +14,7 @@ const postProduct = async (body) => {
 }
 
 const deleteProduct = async (id) => {
-    await Product.deleteOne(id);
+    await Product.findByIdAndDelete(id);
 }
 
 module.exports = {
